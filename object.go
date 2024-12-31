@@ -18,6 +18,7 @@ func object() {
 	delete(m, "Answer")
 	fmt.Println("The value:", m["Answer"])
 
+	// If key is in m, ok is true. If not, ok is false.
 	v, ok := m["Answer"]
 	fmt.Println("The value:", v, "Present?", ok)
 

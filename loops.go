@@ -23,6 +23,16 @@ func ticTacToeBoard() {
 	for i := 0; i < len(board); i++ {
 		fmt.Printf("%s\n", strings.Join(board[i], " "))
 	}
+
+	sum := 0
+
+	for i := 0; i < 10; i++ {
+		fmt.Println(sum)
+		sum += i
+	}
+
+	fmt.Println(sum)
+
 	pow := []int{1, 2, 4, 8, 16, 32, 64, 128}
 
 	for i, v := range pow {
@@ -30,9 +40,11 @@ func ticTacToeBoard() {
 	}
 
 	pew := make([]int, 10)
+
 	for i := range pew {
 		pew[i] = 1 << uint(i) // == 2**i
 	}
+
 	for _, value := range pew {
 		fmt.Printf("%d\n", value)
 	}
