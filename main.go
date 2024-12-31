@@ -21,8 +21,6 @@ func main() {
 
 	fmt.Println(mutiply(5, 2))
 
-	fmt.Println(percentageOf(PercentageOfInputs{Value: 912.2, TotalValue: 10000}))
-
 	a, b := swap("hello", "world")
 	fmt.Println(a, b)
 
