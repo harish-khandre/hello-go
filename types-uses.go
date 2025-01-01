@@ -82,9 +82,29 @@ func methods() {
 	var t []int
 	fmt.Println(t, len(t), cap(t))
 
-	if t == nil {
-		fmt.Println("nil!")
+	// if t == nil {
+	// 	fmt.Println("nil!")
+	// }
+}
+
+// A type switch is a construct that permits several type assertions in series.
+
+func do(i interface{}) {
+	switch v := i.(type) {
+	case int:
+		fmt.Printf("Twice %v is %v\n", v, v*2)
+	case string:
+		fmt.Printf("%q is %v bytes long\n", v, len(v))
+	default:
+		fmt.Printf("I don't know about type %T!\n", v)
 	}
 }
 
-// var m map[string]Vertexx
+type Person struct {
+	Name string
+	Age  int
+}
+
+func (p Person) String() string {
+	return fmt.Sprintf("%v (%v years)", p.Name, p.Age)
+}
